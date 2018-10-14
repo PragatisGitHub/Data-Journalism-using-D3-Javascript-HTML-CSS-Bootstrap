@@ -74,7 +74,7 @@ d3.csv("assets/data/data.csv").then(function(NewsPaper) {
                       .append("circle")
                       .attr("cx",d => xlinearScale(d.poverty))
                       .attr("cy",d => ylinearScale(d.healthcare))
-                      .attr("r",25)
+                      .attr("r",20)
                       .attr("fill", "pink")
                       .attr("opacity", 0.9)
     //Create event listeners to display and hide the tooltip.                 
@@ -109,7 +109,8 @@ d3.csv("assets/data/data.csv").then(function(NewsPaper) {
     .text("In Poverty (%)")
     .style("text-anchor", "middle")
     .style("font-family", "Times New Roman")
-    .style("font-size", "20px");
+    .style("font-size", "20px")
+    .style("font-weight","bold");
 
     chartGroup.append("text")
     .attr("transform", "rotate(-90)")
@@ -120,6 +121,7 @@ d3.csv("assets/data/data.csv").then(function(NewsPaper) {
     .text("Lacks in Healthcare (%)")
     .style("text-anchor", "middle")
     .style("font-family", "Times New Roman")
-    .style("font-size", "20px");
+    .style("font-size", "20px")
+    .style("font-weight","bold");
 
 });    
